@@ -33,3 +33,5 @@ from icc_world_cup
 ) A
 group by Teamname
 order by 5 desc,2 asc
+
+-- code finish
