@@ -22,7 +22,7 @@ group by name
 ,
  mv as (
 select name, floor as most_visited from (
-select name, floor, count(floor) as most_visited , rank() over (partition by name order by count(floor) desc) as rankno
+select name, floor, count(*) as most_visited , rank() over (partition by name order by count(floor) desc) as rankno
 from entries 
 group by name,floor ) A
 where rankno=1
